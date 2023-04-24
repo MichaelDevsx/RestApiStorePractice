@@ -72,4 +72,4 @@ class TokenRefresh(MethodView):
         # Make it clear that when to add the refresh token to the blocklist will depend on the app design
         jti = get_jwt()["jti"]
         BLOCKLIST.add(jti)
-        return {"access_token": new_token}, 2006
+        return {"access_token": new_token}, 206
